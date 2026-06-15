@@ -93,11 +93,11 @@ Total Duration: 40 Days
 
 | Phase | Activity | Duration |
 |-------|----------|----------|
-| Phase 1 | Planning, design, database schema | Day 1 – Day 6 |
-| Phase 2 | Core frontend and backend development | Day 7 – Day 18 |
-| Phase 3 | Advanced features (payments, quizzes, certificates) | Day 19 – Day 30 |
-| Phase 4 | Virtual Study Room and AI Study Assistant | Day 31 – Day 36 |
-| Phase 5 | Testing, optimization, deployment | Day 37 – Day 40 |
+| Phase 1 | Planning, requirement gathering, database design, UI/UX wireframes | Day 1 – Day 6 |
+| Phase 2 | Core frontend and backend development (authentication, roles, course pages, dashboards) | Day 7 – Day 18 |
+| Phase 3 | Advanced features (video player, quizzes, payments, certificates, Q&A, forums, analytics) | Day 19 – Day 30 |
+| Phase 4 | Unique features — Virtual Study Room (Socket.io) and AI Study Assistant (Gemini API) | Day 31 – Day 36 |
+| Phase 5 | Testing, bug fixing, performance optimization, final deployment and documentation | Day 37 – Day 40 |
 
 ---
 
