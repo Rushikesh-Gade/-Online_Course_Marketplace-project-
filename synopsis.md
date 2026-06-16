@@ -1,7 +1,7 @@
 # PROJECT SYNOPSIS
 
 **Name / Title of the Project:**
-Online Course Marketplace with Virtual Study Room and AI-Powered Study Assistant
+**Online Course Marketplace with Virtual Study Room and AI-Powered Study Assistant**
 
 ---
 
