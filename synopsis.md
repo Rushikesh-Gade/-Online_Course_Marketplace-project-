@@ -1,7 +1,7 @@
 # PROJECT SYNOPSIS
 
 **Name / Title of the Project:**
-"Online Course Marketplace "
+"Online Course Marketplace."
 
 ---
 
