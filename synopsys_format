@@ -1,0 +1,72 @@
+Synopsis
+
+
+Project Synopsis Format
+
+● Synopsis, preferably, should be of about 3-4 pages.
+
+● The content should be as brief as possible to explain the objective and implementation of
+
+the project.
+
+● The write-up/document must adhere to the guidelines and should include the following:
+
+ Name / Title of the Project
+
+Statement about the Problem
+
+Describe the problem Statement
+
+Objective and scope of the project
+
+Methodology
+
+Hardware & Software to be used
+
+Future Work of this Project
+
+The Schedule of the project (Gantt chart/ PERT chart)
+
+References/Bibliography.
+
+The following contents have to be taken into consideration in synopsis:
+
+Name/Title/Topic of the Project: This should be explicitly mentioned at the beginning of the Synopsis. Since the topic itself gives an insight into the project to be taken up, the student is  suggested to be reasonable on the name/title of the project. The title being the overall impression on the complete work, the topic should substantiate the work.
+
+Objective and Scope: This should give a clear picture and final outcome of the project. Objectives should be clearly specified. What the project ends up to and in what way it is going to help the end user has to be mentioned.
+
+Process Description: The process of the whole software system proposed, to be developed, should be mentioned in brief. This has to be supported by DFD's/ Flowcharts/Use Case Diagrams to explain the flow of the data and control in the project.
+
+Resources and Limitations: The requirement of the resources for designing and developing the proposed system must be given. The resources might be in form of the hardware / software or real time data. The limitations of the proposed system in respect of a larger and comprehensive system must be given in the synopsis itself.
+
+Conclusion: The document must end with the concluding remarks-briefly describing innovations in implementing the project and also any other important feature that makes the system stand out from the rest.
+
+References and bibliography: The complete list of books (chapter listing, topic listing), website links(complete URLs) and research papers (title and authors, year of publications) have to be mentioned.
+
+Sample format of References:
+
+REFERENCES
+
+[1] S. M. Metev and V . P . Veiko, Laser Assisted Microtechnology, 2nd ed., R. M. Osgood, Jr., Ed.
+
+Berlin, Germany: Springer-Verlag, 1998.
+
+[2] J. Breckling, Ed., The Analysis of Directional Time Series: Applications to Wind Speed and
+
+Direction, ser. Lecture Notes in Statistics. Berlin, Germany: Springer, 1989, vol. 61.
+
+
+
+The topic can be chosen from any technology/field related to Information Technology like Cloud
+
+Computing, Neural Networks and Fuzzy Logic, Image Processing, Artificial Intelligence, Embedded
+
+Systems, Web Development, Applications linked to social networks, Security(wired/wireless), algorithmic approaches, IoT , blockchain technologies etc. The topics are not limited to the list mentioned and can also be in any other area of relevance.
+
+The students should be able to answer the following set of questions at the time of submission of the synopsis (if asked):
+
+Question 1:- Explain in at least 100 words the reasons, why should the department approve your project?
+
+Question 2:- What are the strengths and limitations of your proposed work?
+
+Question 3:- Explain in at least 100 words what will be the positive impact of the project on society/academics/college/industry.
