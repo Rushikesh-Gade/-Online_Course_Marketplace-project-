@@ -1,4 +1,4 @@
-/* ===== ROOT VARIABLES ===== */
+/*  ROOT VARIABLES  */
 :root {
     --bg-primary: #0a0a0f;
     --bg-secondary: #12121a;
@@ -17,7 +17,7 @@
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ===== RESET ===== */
+ /* RESET  */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font); line-height: 1.6; }
@@ -25,13 +25,13 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; }
 
-/* ===== UTILITY ===== */
+/* UTILITY */
 .highlight { color: var(--purple-light); }
 .section-container { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
 .section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 12px; }
 .section-subtitle { text-align: center; color: var(--text-secondary); font-size: 1rem; margin-bottom: 48px; }
 
-/* ===== BUTTONS ===== */
+/*  BUTTONS  */
 .btn-primary {
     background: var(--purple);
     color: #fff;
@@ -65,7 +65,7 @@ img { max-width: 100%; }
     color: #fff;
 }
 
-/* ===== NAVBAR ===== */
+/*  NAVBAR */
 .navbar {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -116,7 +116,7 @@ img { max-width: 100%; }
 .nav-buttons { display: flex; gap: 12px; align-items: center; }
 .hamburger { display: none; font-size: 1.4rem; color: var(--text-primary); cursor: pointer; }
 
-/* ===== HERO ===== */
+/* HERO  */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -241,7 +241,7 @@ img { max-width: 100%; }
 .category-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
 .category-card span { font-size: 0.82rem; color: var(--text-secondary); }
 
-/* ===== COURSES ===== */
+/*  COURSES  */
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -354,7 +354,7 @@ img { max-width: 100%; }
 .step-card p { color: var(--text-secondary); font-size: 0.9rem; }
 .step-arrow { font-size: 1.5rem; color: var(--purple); flex: 0 0 auto; }
 
-/* ===== UNIQUE FEATURES ===== */
+/*  UNIQUE FEATURES  */
 .unique-features {}
 .features-grid {
     display: grid;
@@ -391,7 +391,7 @@ img { max-width: 100%; }
 .feature-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 14px; }
 .feature-card p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; }
 
-/* ===== INSTRUCTOR BANNER ===== */
+/*  INSTRUCTOR BANNER  */
 .instructor-banner {
     background: linear-gradient(135deg, #1a0a3a, #2d1060, #1a0a3a);
     border-top: 1px solid var(--purple-dark);
@@ -402,7 +402,7 @@ img { max-width: 100%; }
 .banner-content h2 { font-size: 2rem; font-weight: 800; margin-bottom: 16px; }
 .banner-content p { color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto; }
 
-/* ===== FOOTER ===== */
+/*  FOOTER  */
 .footer {
     background: var(--bg-secondary);
     border-top: 1px solid var(--border);
@@ -446,7 +446,7 @@ img { max-width: 100%; }
     font-size: 0.85rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/*  RESPONSIVE  */
 @media (max-width: 1024px) {
     .categories-grid { grid-template-columns: repeat(4, 1fr); }
     .courses-grid { grid-template-columns: repeat(2, 1fr); }
