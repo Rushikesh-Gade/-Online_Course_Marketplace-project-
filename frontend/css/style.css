@@ -210,7 +210,7 @@ img { max-width: 100%; }
 .card-name { font-size: 0.85rem; color: var(--purple-light); font-weight: 600; }
 .card-stars { margin-top: 12px; color: var(--star); font-size: 1rem; }
 
-/* ===== CATEGORIES ===== */
+/* CATEGORIES  */
 .categories { background: var(--bg-secondary); }
 .categories-grid {
     display: grid;
@@ -311,7 +311,7 @@ img { max-width: 100%; }
 .btn-enroll:hover { background: var(--purple-light); }
 .view-all { text-align: center; }
 
-/* ===== HOW IT WORKS ===== */
+/*  HOW IT WORKS  */
 .how-it-works { background: var(--bg-secondary); }
 .steps-grid {
     display: flex;
