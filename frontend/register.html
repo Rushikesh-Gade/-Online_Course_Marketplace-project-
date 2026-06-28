@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="auth-body">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Learn<span class="highlight">Hub</span></span>
+            </a>
+            <div class="nav-buttons">
+                <span class="auth-nav-text">Already have an account?</span>
+                <a href="login.html" class="btn-outline">Log In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- AUTH CONTAINER -->
+    <div class="auth-wrapper">
+        <div class="auth-card">
+
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h1>Create Your Account</h1>
+                <p>Start learning for free today</p>
+            </div>
+
+            <!-- OAUTH BUTTONS -->
+            <div class="oauth-buttons">
+                <button class="oauth-btn">
+                    <i class="fab fa-google"></i>
+                    Sign up with Google
+                </button>
+                <button class="oauth-btn">
+                    <i class="fab fa-github"></i>
+                    Sign up with GitHub
+                </button>
+            </div>
+
+            <div class="auth-divider">
+                <span>or sign up with email</span>
+            </div>
+
+            <!-- REGISTER FORM -->
+            <form class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="firstname" placeholder="First name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="lastname" placeholder="Last name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Min 8 characters">
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-fill"></div>
+                        </div>
+                        <span class="strength-text">Enter a password</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">I want to join as</label>
+                    <div class="role-selector">
+                        <div class="role-option active" data-role="student">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Student</span>
+                            <small>I want to learn</small>
+                        </div>
+                        <div class="role-option" data-role="instructor">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Instructor</span>
+                            <small>I want to teach</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+            </form>
+
+            <p class="auth-switch">
+                Already have an account? <a href="login.html">Log in here</a>
+            </p>
+
+        </div>
+
+        <!-- SIDE INFO -->
+        <div class="auth-info">
+            <div class="auth-info-content">
+                <h2>Join 1 Million+ Learners on LearnHub</h2>
+                <p>Get access to world-class courses, a virtual study room, and an AI assistant that helps you learn faster.</p>
+                <div class="auth-features">
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free to sign up, no credit card needed</span>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Access free courses instantly</span>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Join Virtual Study Rooms</span>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>AI Study Assistant included</span>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Earn certificates on completion</span>
+                    </div>
+                </div>
+                <div class="testimonial-mini">
+                    <div class="t-avatar"><i class="fas fa-user"></i></div>
+                    <div>
+                        <p>"I got my first developer job 3 months after joining LearnHub!"</p>
+                        <span>— Arjun K., Frontend Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

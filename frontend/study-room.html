@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Room - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/study-room.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="room-body">
+
+    <!-- TOPBAR -->
+    <header class="room-topbar">
+        <a href="index.html" class="nav-logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Learn<span class="highlight">Hub</span></span>
+        </a>
+        <div class="room-title">
+            <i class="fas fa-users" style="color:var(--purple-light);"></i>
+            <span>JS Bootcamp — Study Room</span>
+            <span class="online-badge"><span class="online-dot"></span> 8 online</span>
+        </div>
+        <div class="room-actions">
+            <a href="learn.html" class="btn-outline btn-sm"><i class="fas fa-play"></i> Back to Course</a>
+            <a href="dashboard-student.html" class="btn-outline btn-sm"><i class="fas fa-home"></i> Dashboard</a>
+        </div>
+    </header>
+
+    <!-- ROOM LAYOUT -->
+    <div class="room-layout">
+
+        <!-- MEMBERS SIDEBAR -->
+        <aside class="members-panel">
+            <div class="members-header">
+                <h3>Members Online</h3>
+                <span class="members-count">8</span>
+            </div>
+            <div class="members-list">
+                <div class="member-item you">
+                    <div class="member-avatar online"><i class="fas fa-user"></i></div>
+                    <div class="member-info">
+                        <span>Rushikesh (You)</span>
+                        <small>Studying Section 4</small>
+                    </div>
+                    <span class="member-status studying">Studying</span>
+                </div>
+                <div class="member-item">
+                    <div class="member-avatar online"><i class="fas fa-user"></i></div>
+                    <div class="member-info">
+                        <span>Arjun S.</span>
+                        <small>Studying Section 3</small>
+                    </div>
+                    <span class="member-status studying">Studying</span>
+                </div>
+                <div class="member-item">
+                    <div class="member-avatar online"><i class="fas fa-user"></i></div>
+                    <div class="member-info">
+                        <span>Priya M.</span>
+                        <small>Taking a break</small>
+                    </div>
+                    <span class="member-status break">Break</span>
+                </div>
+                <div class="member-item">
+                    <div class="member-avatar online"><i class="fas fa-user"></i></div>
+                    <div class="member-info">
+                        <span>Deepak R.</span>
+                        <small>Studying Section 5</small>
+                    </div>
+                    <span class="member-status studying">Studying</span>
+                </div>
+                <div class="member-item">
+                    <div class="member-avatar online"><i class="fas fa-user"></i></div>
+                    <div class="member-info">
+                        <span>Sneha K.</span>
+                        <small>Studying Section 4</small>
+                    </div>
+                    <span class="member-status studying">Studying</span>
+                </div>
+                <div class="member-item">
+                    <div class="member-avatar away"><i class="fas fa-user"></i></div>
+                    <div class="member-info">
+                        <span>Vikram P.</span>
+                        <small>Away</small>
+                    </div>
+                    <span class="member-status away">Away</span>
+                </div>
+            </div>
+
+            <!-- FOCUS TIMER -->
+            <div class="focus-timer">
+                <h4><i class="fas fa-clock"></i> Focus Timer</h4>
+                <div class="timer-display">25:00</div>
+                <div class="timer-controls">
+                    <button class="timer-btn start-timer"><i class="fas fa-play"></i> Start</button>
+                    <button class="timer-btn reset-timer"><i class="fas fa-rotate-right"></i> Reset</button>
+                </div>
+                <div class="timer-presets">
+                    <button class="preset-btn active" data-mins="25">25 min</button>
+                    <button class="preset-btn" data-mins="50">50 min</button>
+                    <button class="preset-btn" data-mins="10">10 min</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN AREA -->
+        <div class="room-main">
+
+            <!-- SHARED NOTES -->
+            <div class="shared-notes">
+                <div class="shared-notes-header">
+                    <h3><i class="fas fa-sticky-note"></i> Shared Notes</h3>
+                    <span class="collab-badge"><i class="fas fa-circle" style="color:#10b981;font-size:0.5rem;"></i> Live collaboration</span>
+                </div>
+                <textarea class="shared-notes-area" placeholder="Start typing shared notes for the group... Everyone in this room can see and edit this.">Section 4 Key Points:
+- async functions always return a Promise
+- await can only be used inside async functions
+- try/catch works great with async/await for error handling
+- Promise.all() runs multiple promises in parallel
+
+Resources shared by Arjun:
+- MDN Docs: https://developer.mozilla.org/async_function
+- YouTube: Fireship - Async Await</textarea>
+            </div>
+
+            <!-- CHAT -->
+            <div class="room-chat">
+                <div class="chat-header">
+                    <h3><i class="fas fa-comments"></i> Group Chat</h3>
+                </div>
+                <div class="chat-messages">
+                    <div class="chat-msg">
+                        <div class="chat-avatar"><i class="fas fa-user"></i></div>
+                        <div class="chat-bubble">
+                            <span class="chat-name">Arjun S.</span>
+                            <p>Hey everyone! Is anyone else confused about Promise.all() vs Promise.allSettled()?</p>
+                            <span class="chat-time">10:24 AM</span>
+                        </div>
+                    </div>
+                    <div class="chat-msg">
+                        <div class="chat-avatar" style="background:rgba(16,185,129,0.15);border-color:#10b981;color:#10b981;"><i class="fas fa-user"></i></div>
+                        <div class="chat-bubble">
+                            <span class="chat-name">Priya M.</span>
+                            <p>Promise.all() fails if any promise fails, but Promise.allSettled() waits for all and gives you results of each one!</p>
+                            <span class="chat-time">10:26 AM</span>
+                        </div>
+                    </div>
+                    <div class="chat-msg chat-msg-you">
+                        <div class="chat-bubble you-bubble">
+                            <span class="chat-name">You</span>
+                            <p>Thanks Priya! I was struggling with this too. The lecture explains it at 15:30 timestamp 👍</p>
+                            <span class="chat-time">10:28 AM</span>
+                        </div>
+                        <div class="chat-avatar you-avatar"><i class="fas fa-user"></i></div>
+                    </div>
+                    <div class="chat-msg">
+                        <div class="chat-avatar"><i class="fas fa-user"></i></div>
+                        <div class="chat-bubble">
+                            <span class="chat-name">Deepak R.</span>
+                            <p>I added some notes in the shared doc about async patterns — check them out!</p>
+                            <span class="chat-time">10:30 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-wrap">
+                    <input type="text" id="chatInput" placeholder="Type a message...">
+                    <button class="chat-emoji"><i class="fas fa-face-smile"></i></button>
+                    <button class="chat-send" id="chatSend"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/study-room.js"></script>
+</body>
+</html>

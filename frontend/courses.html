@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Learn<span class="highlight">Hub</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="#">Instructors</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn-outline">Log In</a>
+                <a href="register.html" class="btn-primary">Sign Up Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <h1>Explore All <span class="highlight">Courses</span></h1>
+            <p>Discover courses taught by expert instructors across every topic</p>
+            <div class="header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for courses, topics, or instructors...">
+                <button class="btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="courses-page">
+
+        <!-- SIDEBAR FILTERS -->
+        <aside class="filters-sidebar">
+            <h3 class="filter-title">Filters</h3>
+
+            <div class="filter-group">
+                <h4>Category</h4>
+                <label class="filter-check"><input type="checkbox" checked> All Categories</label>
+                <label class="filter-check"><input type="checkbox"> Programming</label>
+                <label class="filter-check"><input type="checkbox"> Design</label>
+                <label class="filter-check"><input type="checkbox"> Cloud Computing</label>
+                <label class="filter-check"><input type="checkbox"> AI & ML</label>
+                <label class="filter-check"><input type="checkbox"> Cybersecurity</label>
+                <label class="filter-check"><input type="checkbox"> Business</label>
+                <label class="filter-check"><input type="checkbox"> Data Science</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Difficulty Level</h4>
+                <label class="filter-check"><input type="checkbox"> Beginner</label>
+                <label class="filter-check"><input type="checkbox"> Intermediate</label>
+                <label class="filter-check"><input type="checkbox"> Advanced</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price</h4>
+                <label class="filter-check"><input type="radio" name="price"> All</label>
+                <label class="filter-check"><input type="radio" name="price"> Free</label>
+                <label class="filter-check"><input type="radio" name="price"> Under ₹500</label>
+                <label class="filter-check"><input type="radio" name="price"> ₹500 - ₹1000</label>
+                <label class="filter-check"><input type="radio" name="price"> Above ₹1000</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Rating</h4>
+                <label class="filter-check">
+                    <input type="checkbox">
+                    <span class="stars-small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> 4.5+
+                </label>
+                <label class="filter-check">
+                    <input type="checkbox">
+                    <span class="stars-small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> 4.0+
+                </label>
+                <label class="filter-check">
+                    <input type="checkbox">
+                    <span class="stars-small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> 3.0+
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Language</h4>
+                <label class="filter-check"><input type="checkbox"> English</label>
+                <label class="filter-check"><input type="checkbox"> Hindi</label>
+                <label class="filter-check"><input type="checkbox"> Marathi</label>
+            </div>
+
+            <button class="btn-outline btn-full-filter">Clear Filters</button>
+        </aside>
+
+        <!-- COURSES LIST -->
+        <div class="courses-main">
+            <div class="courses-toolbar">
+                <p class="results-count"><strong>1,240</strong> courses found</p>
+                <div class="toolbar-right">
+                    <select class="sort-select">
+                        <option>Sort by: Relevance</option>
+                        <option>Highest Rated</option>
+                        <option>Most Popular</option>
+                        <option>Newest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                    <div class="view-toggle">
+                        <button class="view-btn active"><i class="fas fa-grip"></i></button>
+                        <button class="view-btn"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courses-grid-page">
+
+                <div class="course-card">
+                    <div class="course-thumb">
+                        <div class="thumb-placeholder"><i class="fas fa-code"></i></div>
+                        <span class="course-badge">Bestseller</span>
+                    </div>
+                    <div class="course-body">
+                        <span class="course-category">Programming</span>
+                        <h3>Complete JavaScript Bootcamp 2024</h3>
+                        <p class="course-instructor"><i class="fas fa-user"></i> Rahul Sharma</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                            <span>4.8 (2,340)</span>
+                        </div>
+                        <div class="course-meta"><i class="fas fa-clock"></i> 42 hours &nbsp;|&nbsp; <i class="fas fa-film"></i> 320 lectures &nbsp;|&nbsp; <i class="fas fa-signal"></i> Beginner</div>
+                        <div class="course-footer">
+                            <span class="course-price">₹499</span>
+                            <span class="course-old-price">₹3,999</span>
+                            <a href="course-detail.html" class="btn-enroll">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb">
+                        <div class="thumb-placeholder" style="background:#db277720;"><i class="fas fa-paint-brush" style="color:#db2777;"></i></div>
+                        <span class="course-badge new">New</span>
+                    </div>
+                    <div class="course-body">
+                        <span class="course-category">Design</span>
+                        <h3>UI/UX Design Masterclass with Figma</h3>
+                        <p class="course-instructor"><i class="fas fa-user"></i> Sneha Patil</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>4.9 (1,820)</span>
+                        </div>
+                        <div class="course-meta"><i class="fas fa-clock"></i> 28 hours &nbsp;|&nbsp; <i class="fas fa-film"></i> 210 lectures &nbsp;|&nbsp; <i class="fas fa-signal"></i> Intermediate</div>
+                        <div class="course-footer">
+                            <span class="course-price">₹599</span>
+                            <span class="course-old-price">₹4,499</span>
+                            <a href="course-detail.html" class="btn-enroll">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb">
+                        <div class="thumb-placeholder" style="background:#d9770620;"><i class="fas fa-cloud" style="color:#d97706;"></i></div>
+                        <span class="course-badge">Popular</span>
+                    </div>
+                    <div class="course-body">
+                        <span class="course-category">Cloud Computing</span>
+                        <h3>AWS Cloud Practitioner — Zero to Hero</h3>
+                        <p class="course-instructor"><i class="fas fa-user"></i> Amit Desai</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                            <span>4.7 (3,100)</span>
+                        </div>
+                        <div class="course-meta"><i class="fas fa-clock"></i> 35 hours &nbsp;|&nbsp; <i class="fas fa-film"></i> 280 lectures &nbsp;|&nbsp; <i class="fas fa-signal"></i> Beginner</div>
+                        <div class="course-footer">
+                            <span class="course-price">₹799</span>
+                            <span class="course-old-price">₹5,999</span>
+                            <a href="course-detail.html" class="btn-enroll">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb">
+                        <div class="thumb-placeholder" style="background:#05966920;"><i class="fas fa-robot" style="color:#059669;"></i></div>
+                        <span class="course-badge new">New</span>
+                    </div>
+                    <div class="course-body">
+                        <span class="course-category">AI & ML</span>
+                        <h3>Machine Learning with Python</h3>
+                        <p class="course-instructor"><i class="fas fa-user"></i> Neha Joshi</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>4.9 (980)</span>
+                        </div>
+                        <div class="course-meta"><i class="fas fa-clock"></i> 50 hours &nbsp;|&nbsp; <i class="fas fa-film"></i> 410 lectures &nbsp;|&nbsp; <i class="fas fa-signal"></i> Intermediate</div>
+                        <div class="course-footer">
+                            <span class="course-price">₹699</span>
+                            <span class="course-old-price">₹4,999</span>
+                            <a href="course-detail.html" class="btn-enroll">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb">
+                        <div class="thumb-placeholder" style="background:#dc262620;"><i class="fas fa-shield-halved" style="color:#dc2626;"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <span class="course-category">Cybersecurity</span>
+                        <h3>Ethical Hacking & Penetration Testing</h3>
+                        <p class="course-instructor"><i class="fas fa-user"></i> Vikram Mehta</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                            <span>4.6 (1,540)</span>
+                        </div>
+                        <div class="course-meta"><i class="fas fa-clock"></i> 38 hours &nbsp;|&nbsp; <i class="fas fa-film"></i> 295 lectures &nbsp;|&nbsp; <i class="fas fa-signal"></i> Advanced</div>
+                        <div class="course-footer">
+                            <span class="course-price">₹899</span>
+                            <span class="course-old-price">₹6,999</span>
+                            <a href="course-detail.html" class="btn-enroll">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-thumb">
+                        <div class="thumb-placeholder" style="background:#0891b220;"><i class="fas fa-database" style="color:#0891b2;"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <span class="course-category">Data Science</span>
+                        <h3>Data Science & Analytics with Python</h3>
+                        <p class="course-instructor"><i class="fas fa-user"></i> Priya Nair</p>
+                        <div class="course-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>4.4 (2,100)</span>
+                        </div>
+                        <div class="course-meta"><i class="fas fa-clock"></i> 45 hours &nbsp;|&nbsp; <i class="fas fa-film"></i> 360 lectures &nbsp;|&nbsp; <i class="fas fa-signal"></i> Beginner</div>
+                        <div class="course-footer">
+                            <span class="course-price">Free</span>
+                            <a href="course-detail.html" class="btn-enroll">Enroll Free</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+                <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">24</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2024 LearnHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

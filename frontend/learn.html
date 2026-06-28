@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/learn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="learn-body">
+
+    <!-- LEARN TOPBAR -->
+    <header class="learn-topbar">
+        <div class="learn-topbar-left">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Learn<span class="highlight">Hub</span></span>
+            </a>
+            <span class="learn-course-title">Complete JavaScript Bootcamp 2024</span>
+        </div>
+        <div class="learn-topbar-right">
+            <div class="learn-progress-mini">
+                <span>65% complete</span>
+                <div class="mini-bar"><div class="mini-bar-fill" style="width:65%"></div></div>
+            </div>
+            <a href="study-room.html" class="btn-outline btn-sm"><i class="fas fa-users"></i> Study Room</a>
+            <a href="dashboard-student.html" class="btn-outline btn-sm"><i class="fas fa-home"></i> Dashboard</a>
+        </div>
+    </header>
+
+    <!-- LEARN LAYOUT -->
+    <div class="learn-layout">
+
+        <!-- VIDEO AREA -->
+        <div class="learn-main">
+
+            <!-- VIDEO PLAYER -->
+            <div class="video-player-wrap">
+                <div class="video-player">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <p>Async/Await in JavaScript</p>
+                    </div>
+                    <div class="video-controls">
+                        <div class="controls-left">
+                            <button class="ctrl-btn"><i class="fas fa-backward-step"></i></button>
+                            <button class="ctrl-btn play-btn"><i class="fas fa-play"></i></button>
+                            <button class="ctrl-btn"><i class="fas fa-forward-step"></i></button>
+                            <div class="volume-wrap">
+                                <button class="ctrl-btn"><i class="fas fa-volume-high"></i></button>
+                                <input type="range" class="volume-slider" value="80" min="0" max="100">
+                            </div>
+                            <span class="time-display">08:24 / 20:00</span>
+                        </div>
+                        <div class="controls-right">
+                            <select class="speed-select">
+                                <option>0.5x</option>
+                                <option>0.75x</option>
+                                <option selected>1x</option>
+                                <option>1.25x</option>
+                                <option>1.5x</option>
+                                <option>2x</option>
+                            </select>
+                            <button class="ctrl-btn" title="Subtitles"><i class="fas fa-closed-captioning"></i></button>
+                            <button class="ctrl-btn" title="Fullscreen"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="progress-scrubber">
+                        <div class="scrubber-fill" style="width:42%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABS -->
+            <div class="learn-tabs">
+                <button class="learn-tab active" data-tab="overview">Overview</button>
+                <button class="learn-tab" data-tab="notes">My Notes</button>
+                <button class="learn-tab" data-tab="qa">Q&A</button>
+                <button class="learn-tab" data-tab="reviews">Reviews</button>
+            </div>
+
+            <!-- TAB CONTENT -->
+            <div class="tab-content active" id="tab-overview">
+                <h2>Async/Await in JavaScript</h2>
+                <p>In this lecture, you will learn how to use async/await to write cleaner asynchronous code in JavaScript. We cover promise chaining, error handling with try/catch, and real-world API examples.</p>
+                <div class="lecture-resources">
+                    <h4>Resources</h4>
+                    <a href="#" class="resource-link"><i class="fas fa-file-pdf"></i> Lecture Notes - Async/Await.pdf</a>
+                    <a href="#" class="resource-link"><i class="fas fa-file-code"></i> Source Code - Section4.zip</a>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-notes" style="display:none;">
+                <div class="notes-area">
+                    <div class="notes-header">
+                        <h3>My Notes</h3>
+                        <button class="btn-primary btn-sm"><i class="fas fa-plus"></i> Add Note at 08:24</button>
+                    </div>
+                    <div class="note-item">
+                        <span class="note-timestamp">05:12</span>
+                        <p>async functions always return a promise even if you don't explicitly return one</p>
+                        <button class="note-delete"><i class="fas fa-trash"></i></button>
+                    </div>
+                    <div class="note-item">
+                        <span class="note-timestamp">08:00</span>
+                        <p>await pauses execution inside async function until the promise resolves</p>
+                        <button class="note-delete"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-qa" style="display:none;">
+                <div class="qa-area">
+                    <div class="qa-input-wrap">
+                        <input type="text" placeholder="Ask a question about this lecture...">
+                        <button class="btn-primary btn-sm">Ask</button>
+                    </div>
+                    <div class="qa-item">
+                        <div class="qa-avatar"><i class="fas fa-user"></i></div>
+                        <div class="qa-body">
+                            <strong>Deepak R.</strong>
+                            <p>What's the difference between async/await and .then() chaining?</p>
+                            <div class="qa-reply">
+                                <div class="qa-avatar instructor-qa"><i class="fas fa-chalkboard-teacher"></i></div>
+                                <div>
+                                    <strong style="color:var(--purple-light);">Rishi Patil (Instructor)</strong>
+                                    <p>Both achieve the same result but async/await is more readable and easier to debug. Use await when you have sequential operations and .then() when chaining is simpler.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-reviews" style="display:none;">
+                <p style="color:var(--text-secondary);">Complete the course to leave a review.</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="learn-sidebar">
+
+            <!-- AI ASSISTANT -->
+            <div class="ai-assistant">
+                <div class="ai-header">
+                    <div class="ai-icon"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <h3>AI Study Assistant</h3>
+                        <span>Powered by Gemini AI</span>
+                    </div>
+                    <button class="ai-toggle"><i class="fas fa-chevron-up"></i></button>
+                </div>
+                <div class="ai-chat">
+                    <div class="ai-messages">
+                        <div class="ai-msg ai">
+                            <i class="fas fa-robot"></i>
+                            <p>Hi! I'm your AI Study Assistant. Ask me anything about this lecture — I can explain concepts, give examples, or quiz you!</p>
+                        </div>
+                        <div class="ai-msg user">
+                            <p>Can you explain async/await in simple words?</p>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="ai-msg ai">
+                            <i class="fas fa-robot"></i>
+                            <p>Sure! Imagine you order food at a restaurant. Instead of standing at the counter waiting (blocking), you sit down and do other things. When food is ready, you're notified. That's async/await — your code continues while waiting for a task to finish, then resumes when it's done.</p>
+                        </div>
+                    </div>
+                    <div class="ai-input-wrap">
+                        <input type="text" placeholder="Ask the AI assistant...">
+                        <button class="ai-send"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CURRICULUM -->
+            <div class="curriculum-panel">
+                <div class="curriculum-panel-header">
+                    <h3>Course Content</h3>
+                    <span>320 lectures</span>
+                </div>
+                <div class="curriculum-sections">
+                    <div class="curr-section">
+                        <div class="curr-section-title">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Section 4: Async JavaScript & APIs</span>
+                        </div>
+                        <div class="curr-lessons">
+                            <div class="curr-lesson completed"><i class="fas fa-check-circle"></i> <span>Callbacks</span> <span class="lesson-dur">13:00</span></div>
+                            <div class="curr-lesson completed"><i class="fas fa-check-circle"></i> <span>Promises</span> <span class="lesson-dur">18:00</span></div>
+                            <div class="curr-lesson active"><i class="fas fa-play-circle"></i> <span>Async/Await</span> <span class="lesson-dur">20:00</span></div>
+                            <div class="curr-lesson"><i class="fas fa-play-circle"></i> <span>Fetch API</span> <span class="lesson-dur">25:00</span></div>
+                            <div class="curr-lesson"><i class="fas fa-file-alt"></i> <span>Section Quiz</span> <span class="lesson-dur">5 Qs</span></div>
+                        </div>
+                    </div>
+                    <div class="curr-section">
+                        <div class="curr-section-title collapsed">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Section 5: OOP in JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="curr-section">
+                        <div class="curr-section-title collapsed">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Section 6: Real-World Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/learn.js"></script>
+</body>
+</html>

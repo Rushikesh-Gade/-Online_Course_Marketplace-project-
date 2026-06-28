@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="auth-body">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Learn<span class="highlight">Hub</span></span>
+            </a>
+            <div class="nav-buttons">
+                <span class="auth-nav-text">Don't have an account?</span>
+                <a href="register.html" class="btn-primary">Sign Up Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- AUTH CONTAINER -->
+    <div class="auth-wrapper">
+        <div class="auth-card">
+
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h1>Welcome Back</h1>
+                <p>Log in to continue your learning journey</p>
+            </div>
+
+            <!-- OAUTH BUTTONS -->
+            <div class="oauth-buttons">
+                <button class="oauth-btn">
+                    <i class="fab fa-google"></i>
+                    Continue with Google
+                </button>
+                <button class="oauth-btn">
+                    <i class="fab fa-github"></i>
+                    Continue with GitHub
+                </button>
+            </div>
+
+            <div class="auth-divider">
+                <span>or login with email</span>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        Password
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Enter your password">
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me for 30 days</label>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full">
+                    <i class="fas fa-right-to-bracket"></i> Log In
+                </button>
+            </form>
+
+            <p class="auth-switch">
+                Don't have an account? <a href="register.html">Sign up for free</a>
+            </p>
+
+        </div>
+
+        <!-- SIDE INFO -->
+        <div class="auth-info">
+            <div class="auth-info-content">
+                <h2>Continue Learning Where You Left Off</h2>
+                <p>Access thousands of courses, track your progress, and earn certificates — all from your personal dashboard.</p>
+                <div class="auth-features">
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>10,000+ courses available</span>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Learn at your own pace</span>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>AI-powered study assistant</span>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Virtual study rooms</span>
+                    </div>
+                    <div class="auth-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Verified certificates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
