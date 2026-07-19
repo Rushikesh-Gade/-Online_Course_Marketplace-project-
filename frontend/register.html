@@ -38,11 +38,11 @@
 
             <!-- OAUTH BUTTONS -->
             <div class="oauth-buttons">
-                <button class="oauth-btn">
+                <button class="oauth-btn" onclick="alert('Google OAuth coming soon! Please use email registration for now.')">
                     <i class="fab fa-google"></i>
                     Sign up with Google
                 </button>
-                <button class="oauth-btn">
+                <button class="oauth-btn" onclick="alert('GitHub OAuth coming soon! Please use email registration for now.')">
                     <i class="fab fa-github"></i>
                     Sign up with GitHub
                 </button>
@@ -112,7 +112,7 @@
 
                 <div class="form-check">
                     <input type="checkbox" id="terms">
-                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
                 </div>
 
                 <button type="submit" class="btn-primary btn-full">
@@ -165,6 +165,52 @@
 
     </div>
 
+    <script src="js/api.js"></script>
     <script src="js/auth.js"></script>
+    <script>
+    // REGISTER FORM SUBMIT
+    document.querySelector('.auth-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const first_name = document.getElementById('firstname').value.trim();
+        const last_name = document.getElementById('lastname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        const terms = document.getElementById('terms').checked;
+        const role = document.querySelector('.role-option.active')?.dataset.role || 'student';
+        const btn = this.querySelector('button[type="submit"]');
+
+        if (!terms) { showError('Please accept the Terms of Service.'); return; }
+
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating account...';
+
+        try {
+            const data = await apiCall('/auth/register', 'POST', { first_name, last_name, email, password, role });
+            if (data.success) {
+                saveAuth(data.token, data.user);
+                redirectAfterLogin(data.user.role);
+            } else {
+                showError(data.message);
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-user-plus"></i> Create Account';
+            }
+        } catch (err) {
+            showError('Cannot connect to server. Make sure the backend is running.');
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-user-plus"></i> Create Account';
+        }
+    });
+
+    function showError(msg) {
+        let err = document.querySelector('.error-msg');
+        if (!err) {
+            err = document.createElement('div');
+            err.className = 'error-msg';
+            document.querySelector('.auth-form').prepend(err);
+        }
+        err.textContent = msg;
+        err.style.cssText = 'background:rgba(239,68,68,0.15);border:1px solid #ef4444;color:#ef4444;padding:12px 16px;border-radius:8px;font-size:0.88rem;margin-bottom:12px;';
+    }
+    </script>
 </body>
 </html>
