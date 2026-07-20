@@ -1,0 +1,13 @@
+backend/
+├── server.js          — main entry point
+├── config/
+│   └── db.js          — MySQL connection
+├── routes/
+│   ├── auth.js        — login, register, logout
+│   ├── courses.js     — get/create/update/delete courses
+│   ├── enrollments.js — enroll in course
+│   ├── users.js       — user profile
+│   └── payments.js    — Stripe payments
+├── middleware/
+│   └── auth.js        — protect routes (login required)
+└── database.sql       — all MySQL tables
