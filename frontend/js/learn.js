@@ -41,14 +41,33 @@ function addAiMessage(text, type) {
 }
 
 if (aiSend) {
-    aiSend.addEventListener('click', function() {
+    aiSend.addEventListener('click', async function() {
         var val = aiInput.value.trim();
         if (!val) return;
         addAiMessage(val, 'user');
         aiInput.value = '';
-        setTimeout(function() {
-            addAiMessage('That\'s a great question! This topic is covered in depth in the current lecture. Try pausing at the key explanation around the 10-minute mark for a detailed breakdown.', 'ai');
-        }, 800);
+
+        // Show typing indicator
+        var typing = document.createElement('div');
+        typing.className = 'ai-msg ai typing-indicator';
+        typing.innerHTML = '<i class="fas fa-robot"></i><p>Thinking...</p>';
+        aiMessages.appendChild(typing);
+        aiMessages.scrollTop = aiMessages.scrollHeight;
+
+        try {
+            const token = getToken();
+            const response = await fetch('http://localhost:5000/api/ai/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
+                body: JSON.stringify({ question: val, context: 'JavaScript course - Async/Await lecture' })
+            });
+            const data = await response.json();
+            typing.remove();
+            addAiMessage(data.answer || 'Sorry, I could not answer that right now.', 'ai');
+        } catch (err) {
+            typing.remove();
+            addAiMessage('Could not connect to AI assistant. Make sure the backend server is running.', 'ai');
+        }
     });
     aiInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') aiSend.click();

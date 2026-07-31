@@ -24,6 +24,8 @@ app.use('/api/courses', require('./routes/courses'));
 app.use('/api/enrollments', require('./routes/enrollments'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/reviews', require('./routes/reviews'));
+app.use('/api/ai', require('./routes/ai'));
+app.use('/api/payments', require('./routes/payments'));
 
 // ===== HEALTH CHECK =====
 app.get('/api/health', (req, res) => {
