@@ -49,3 +49,19 @@ async function apiCall(endpoint, method = 'GET', body = null) {
     const response = await fetch(API_URL + endpoint, options);
     return response.json();
 }
+
+// ===== SMART LOGO REDIRECT =====
+// When page loads, set logo link based on login status
+document.addEventListener('DOMContentLoaded', function() {
+    var logoLink = document.getElementById('logoLink');
+    if (logoLink) {
+        if (isLoggedIn()) {
+            var u = getUser();
+            if (u && u.role === 'instructor') logoLink.href = 'dashboard-instructor.html';
+            else if (u && u.role === 'admin') logoLink.href = 'admin.html';
+            else logoLink.href = 'dashboard-student.html';
+        } else {
+            logoLink.href = 'index.html';
+        }
+    }
+});
