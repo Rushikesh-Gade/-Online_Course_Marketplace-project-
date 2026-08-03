@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <a href="dashboard-student.html"><i class="fas fa-graduation-cap"></i><span>Learn<span class="highlight">Hub</span></span></a>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard-student.html" class="nav-item"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="my-courses.html" class="nav-item"><i class="fas fa-book-open"></i> My Courses</a>
+            <a href="wishlist.html" class="nav-item"><i class="fas fa-heart"></i> Wishlist</a>
+            <a href="certificates.html" class="nav-item active"><i class="fas fa-certificate"></i> Certificates</a>
+            <a href="study-room.html" class="nav-item"><i class="fas fa-users"></i> Study Rooms</a>
+            <a href="notifications.html" class="nav-item"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="settings.html" class="nav-item"><i class="fas fa-gear"></i> Settings</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#" class="nav-item" id="logoutBtn"><i class="fas fa-right-from-bracket"></i> Logout</a>
+        </div>
+    </aside>
+    <div class="dashboard-main">
+        <header class="dash-topbar">
+            <div class="topbar-left"><h1>My Certificates</h1></div>
+            <div class="topbar-right">
+                <div class="topbar-avatar"><i class="fas fa-user"></i><span id="userName">Student</span></div>
+            </div>
+        </header>
+        <div style="padding:24px 32px;">
+            <div class="welcome-banner" style="margin-bottom:24px;">
+                <div><h2>Your <span class="highlight">Certificates</span></h2><p>Complete courses to earn verified certificates</p></div>
+            </div>
+            <section class="dash-section">
+                <div id="certsContainer" class="cert-list">
+                    <div style="text-align:center;padding:40px;color:var(--text-muted);"><i class="fas fa-spinner fa-spin" style="font-size:2rem;"></i></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script>
+        if (!isLoggedIn()) window.location.href = 'login.html';
+        const u = getUser();
+        if (u) document.getElementById('userName').textContent = u.first_name;
+        document.getElementById('logoutBtn').addEventListener('click', function(e) { e.preventDefault(); logout(); });
+
+        async function loadCerts() {
+            const data = await apiCall('/users/certificates');
+            const container = document.getElementById('certsContainer');
+            if (data.success && data.certificates.length > 0) {
+                container.innerHTML = '';
+                data.certificates.forEach(c => {
+                    container.innerHTML += `
+                        <div class="cert-item">
+                            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                            <div><h4>${c.course_title}</h4><p>Completed on ${new Date(c.issued_at).toLocaleDateString()}</p></div>
+                            <a href="#" class="btn-outline btn-xs"><i class="fas fa-download"></i> Download</a>
+                        </div>`;
+                });
+            } else {
+                container.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text-muted);"><i class="fas fa-certificate" style="font-size:3rem;margin-bottom:16px;display:block;color:var(--star);"></i><p>No certificates yet. Complete a course to earn one!</p><a href="courses.html" class="btn-primary" style="margin-top:16px;display:inline-block;">Browse Courses</a></div>';
+            }
+        }
+        loadCerts();
+    </script>
+</body>
+</html>
